@@ -1,0 +1,434 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<meta charset="UTF-8">
+  	<title>Tomates y pilates</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css">
+  	<link rel="stylesheet" href="css/cssreset.css">
+    <link rel="stylesheet" href="css/estilomodal.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+     
+    <link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.datepicker-es.js"></script>
+
+<script>
+$(function () {
+
+var eventos = ['01-6-2017', '05-6-2017', '06-6-2017', '07-6-2017', '08-6-2017', '12-6-2017', '13-6-2017', '14-6-2017','15-6-2017', '19-6-2017', '20-6-2017', '21-6-2017', '22-6-2017', '26-6-2017', '27-6-2017', '28-6-2017','29-6-2017', '03-7-2017', '04-7-2017', '05-7-2017', '06-7-2017','10-7-2017', '11-7-2017', '12-7-2017', '13-7-2017', '17-7-2017', '18-7-2017', '19-7-2017', '20-7-2017','21-7-2017', '22-7-2017', '23-7-2017', '24-7-2017', '25-7-2017', '26-7-2017', '27-7-2017', '28-7-2017','29-7-2017', '30-7-2017', '31-7-2017', '01-8-2017', '02-8-2017','03-8-2017','07-8-2017', '08-8-2017','09-8-2017', '10-8-2017','14-8-2017', '15-8-2017','16-8-2017', '17-8-2017','21-8-2017', '22-8-2017','23-8-2017', '24-8-2017','28-8-2017', '29-8-2017','30-8-2017', '31-8-2017','04-9-2017', '05-9-2017','06-9-2017', '07-9-2017','11-9-2017', '12-9-2017','13-9-2017', '14-9-2017','18-9-2017', '19-9-2017','20-9-2017', '21-9-2017','25-9-2017', '26-9-2017','27-9-2017', '28-9-2017'];
+var fechaElegida = "";
+/*$( "#ajax-fechainicio" ).focus(function() {
+$("#ajax-fechainicio").val('');
+});
+$( "#ajax-fechafin" ).focus(function() {
+$("#ajax-fechafin").val('');
+});*/
+
+$.datepicker.setDefaults($.datepicker.regional["es"]);
+$('#ajax-fechainicio').show();
+$('#ajax-fechafin').hide();
+$("#ajax-fechainicio").datepicker({
+   beforeShowDay: function(date) {
+                var current = $.datepicker.formatDate('dd-m-yy', date);
+                return jQuery.inArray(current, eventos) == -1 ? [true, ''] : [false, 'ui-state-hover', 'ui-state-highlight'];
+            },
+
+firstDay: 1,
+numberOfMonths: 2,
+showButtonPanel: true,
+duration: "slow",
+changeMonth: true,
+minDate: new Date(2017, 6 - 1, 2),//primera fecha seleccionable
+maxDate: new Date(2017, 9 - 1, 25),//última fecha seleccionable
+onSelect: function (date) {
+
+},
+onClose: function (selectedDate) {
+
+$('#ajax-fechafin').show();
+$("#ajax-fechafin").datepicker("option", "minDate", selectedDate);
+}
+})/*.datepicker( "show" ).datepicker( "refresh" )*/;
+
+
+$("#ajax-fechafin").datepicker({
+ beforeShowDay: function(date) {
+                var current = $.datepicker.formatDate('dd-m-yy', date);
+                return jQuery.inArray(current, eventos) == -1 ? [true, ''] : [false, 'ui-state-hover', 'ui-state-highlight'];
+            },  
+firstDay: 1,
+numberOfMonths: 2,
+showButtonPanel: true,
+duration: "slow",
+changeMonth: true,
+minDate: new Date(2017, 6 - 1, 2),
+maxDate: new Date(2017, 9 - 1, 25),
+onSelect: function (selectedDate) {
+ 
+},
+onClose: function (selectedDate) {
+ $("#ajax-fechainicio").datepicker("option", "maxDate", selectedDate);
+
+}
+});
+});
+</script>
+  </head>
+  <body>
+    <div id="nuevatemporada">
+      <p>Empieza la nueva temporada 2017</p>
+    </div>
+    <div id="tamanopantalla">
+    </div>
+    <div class="pantallaexplorer">
+      <p>Lo sentimos, esta página no se puede mostrar en este navegador.</p>
+    </div>
+
+      <div id="fondoheader">
+      </div>
+
+     
+      
+
+
+       <div class="header">
+            <div class="titulo">      
+              <h1>TOMATES Y PILATES</h1>
+            </div>
+          
+          <div class="pull-right">
+              <ul class="opcionescontainer">
+                <li class='opciones home'>
+                  <h1>INICIO</h1>
+                </li>
+                <li class='opciones casadropdown'>
+                  <h1>CASA</h1>
+                  <ul class="dropdown-menu">
+                      <li class="opciones casa">La Casa Azul</li>
+                      <li class="opciones alrededores">El Entorno</li>
+                      
+                  </ul> 
+                </li>
+                <li class='opciones entretenimiento'>
+                  <h1>ACTIVIDADES</h1>
+                </li>
+                <li class='opciones fotos'>
+                  <h1>FOTOGRAFÍAS</h1>
+                </li>
+                <li class='opciones casadropdown'>
+                  <h1>RESERVAS</h1>
+                    <ul class="dropdown-menu">
+                      <li class="opciones precios">los Precios</li>
+                      <li class="opciones reservas">las Reservas</li>
+                    </ul>
+
+                </li>              
+            </ul>
+          </div>
+       </div>
+
+    <div class="botonmenu">
+      <div class="contieneopciones">
+        <img src="imagenes/menu.png">
+        <p>OPCIONES</P>
+      </div>
+          <div class="pull-rightoculto">
+            <ul class="opcionescontainer">
+             <li class='opciones home'>
+                <h1>INICIO</h1>
+              </li>
+              <li class='opciones casadropdown'>
+                <h1>CASA</h1>
+                  <ul class="dropdown-menu">
+                      <li class="opciones casa">La Casa Azul</li>
+                      <li class="opciones alrededores">El Entorno</li>
+                      
+                  </ul> 
+              </li>
+              <li class='opciones entretenimiento'>
+                <h1>ACTIVIDADES</h1>
+              </li>
+              <li class='opciones fotos'>
+                <h1>FOTOGRAFÍAS</h1>
+              </li>
+              <li class='opciones casadropdown'>
+                <h1>RESERVAS</h1>
+                 <ul class="dropdown-menu">
+                      <li class="opciones precios">los Precios</li>
+                      <li class="opciones reservas">las Reservas</li>
+                  </ul>
+
+              </li>              
+            </ul>
+          </div>
+      </div>
+
+    <div class="ventana zonaalrededores">
+      <div class="lacasa">
+        <h2>El Entorno</h2>
+        <img src="imagenes/entornofoto.jpg">
+      </div>
+      <div class="casatexto">
+        
+        <p>&nbsp&nbsp&nbspBurete está situado en la comarca del Noroeste de la provincia de Murcia, entre las sierras de Cazorla y Segura, al Oeste y Murcia capital al Este. En las proximidades están los pueblos de Cehegín, Caravaca de la Cruz, Calasparra, Mula, etc.</br>&nbsp&nbsp&nbspEsta la casa enclavada en un valle de monte bajo cubierto en las partes altas de pino negro y de cultivos en las zonas mas bajas. Impera el olivo y el almendro, asi como algunos frutales como el melocotón y el albaricoque. Es una Zona Especial de Protección de Aves.</br>&nbsp&nbsp&nbspEntre los Puntos de Interés cercanos, podemos señalar: los arrozales de Calasparra; podremos observar como son inundados hacia el mes de Junio y posteriormente, finales de Julio,  ver los verdes brotes de donde saldrá el preciado alimento. Otra visita interesante será la del pueblo de Cehegín, con su casco histórico. En Mula tenemos unos baños termales, en los que relajarnos. Y, en Caravaca de la Cruz, y en general, en toda la zona, podremos degustar el arroz caldoso y el pulpo al horno, dos placeres culinarios de la zona. 
+        </p>
+
+      </div>
+    </div>
+
+       <div class="ventana mapasitio">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59769.852033353985!2d-1.8349495694479234!3d38.06418833661171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6454660398dd41%3A0x1a6224dd81f81255!2s30430+Burete%2C+Murcia!5e0!3m2!1ses!2ses!4v1465843675075"frameborder="0"></iframe>
+       </div>
+    
+        
+       
+    
+    <div class="ventana main">
+      <div class="contienecasa">
+      <div class="lacasa">
+        <h2>La Casa Azul</h2>
+        <img src="imagenes/casafoto.jpg">
+
+      </div>
+      <div class="casatexto">
+        
+        <p>&nbsp&nbsp&nbspLas actividades se realizan en una antigua casa de labranza, de gruesos muros rehabilitada, que conserva algunas de sus peculiaridades mas originales: su estructura, la irregular forma de sus paredes, abultamientos y curiosas incrustaciones, así como el trazado antiguo del patio y de algunas estancias incluída la encantadora bodega donde se conservaba el aceite y el vino. </br>&nbsp&nbsp&nbspDispone de 5 dormitorios, 3 dobles y 2 triples, y de 3 baños completos, cocina, salón con chimenea y en el patio un pilón donde refrescarse y disfturar del sol tumbado en una hamaca. En el exterior existe un horno tradicional.</br>&nbsp&nbsp&nbspLa casa está situada en un tranquilo valle, desde sus ventanas se contempla la sierra de Burete y los campos de olivos, almendros y melocotoneros. El aire siempre está impregnado por las plantas aromáticas autóctonas: romero, tomillo y espliego, al que se suman en primavera los aromas de la flor del almendro y de los frutales; en verano el de la propia fruta madurando.
+        </p>
+       </div>
+     </div>
+    </div>
+
+    
+
+    <div class="ventana zonasfoto">
+    <div class="primero"> 
+      <img src="imagenes/patio.jpg"><br></br>
+      <strong class="opciones patio">Exteriores</strong>
+     </div>
+
+     <div class="mosaico"> 
+      <img src="imagenes/patio0.jpg"><br></br>
+      <strong class="opciones patio">Exteriores</strong>
+     </div>
+
+     <div class="container">
+      <img src="imagenes/exteriores.jpg"><br></br>
+      <strong class="opciones entorno">Entorno</strong>
+     </div>
+
+     <div class="mosaico">
+      <img src="imagenes/entorno0.jpg"><br></br>
+      <strong class="opciones entorno">Entorno</strong>
+     </div>
+
+     <div class="container">
+      <img src="imagenes/habitaciones.jpg"><br></br>
+      <strong class="opciones habitaciones">Habitaciones</strong>
+      </div>
+
+      <div class="mosaico">
+      <img src="imagenes/habitaciones0.jpg"><br></br>
+      <strong class="opciones habitaciones">Habitaciones</strong>
+      </div>
+     <div class="container">
+      <img src="imagenes/actividades.jpg"><br></br>
+      <strong class="opciones actividades">Actividades</strong>
+    </div>
+
+    <div class="mosaico">
+      <img src="imagenes/actividades0.jpg"><br></br>
+      <strong class="opciones actividades">Actividades</strong>
+    </div>
+
+   </div>
+
+
+    <div class="expofoto">
+     <div class="visorfoto">
+        <div class="textofotos">
+         <p class="comentariofoto"></p>
+        </div>
+      <img class="fotoactual" src="imagenes/patio3.jpg" onerror="errorImagen()">
+
+        <ul class="flechasimagen">
+          <li class="flechaizquierda"><</li>
+          <li class="cerrar">X</li>
+          <li class="flechaderecha">></li>
+        </ul>
+    </div>
+    </div>
+
+
+
+
+    <div class="ventana actividad">
+      <div class="lacasa">
+        <h2>Tomates y Pilates</h2>
+        <img src="imagenes/envasadotomate.jpg">
+      </div>
+      <script>
+      function errorImagen() {
+    alert('Sorry the image could not be loaded. Please reload this page');
+    }
+    </script>
+      <div class="casatexto">
+        
+        <p>&nbsp&nbsp&nbspAprende a hacer tu propia mermelada o conserva, (y llévatela a casa) con los mejores productos autóctonos de temporada -tomate, pimiento verde, melocotón,m etc.-, sin añadir ningún producto artificial como aditivo. Tienes la oportunidad de conciliarte con la naturaleza a través de los auténticos sabores tradicionales, experiencias, olores y colores. <font COLOR=ffffff>ESTO SE COMPLEMENTA CON TALLERES DE PILATES Y MEDITACIÓN.</font></br>&nbsp&nbsp&nbspTodo ello en un entorno ideal que invita al descanso, y al ocio que prefieras: leer, pasear, etc. Dedicado a personas que desean disfrutar de la tranquilidad del campo, lejos del frenesí de la ciudad o que simplemente quieren hacer una pausa diferente en su rutina.</br>&nbsp&nbsp&nbspNo tenemos apenas cobertura de movil. Nevera, cocina y agua caliente son de gas. Te aseguramos una estancia y una experiencia en un lugar especial, alejado del frenesí, y donde sólo existirán el silencio, la paz y el sonido de la naturaleza, durante el tiempo que estés. Puedes venir con tus amigos o conocer nuevas personas.</br><a class ="linkpilateinfo" href="#pilate">info pilates...</a><a class ="linktomateinfo" href="#tomate">info tomates...</a>
+        </p>
+        
+        
+       </div>
+       <div class="lospilates">
+        <h2>Pilates</h2>
+        <img src="imagenes/infopilates.jpg">
+      </div>
+        
+       <div class="pilateoculto">
+        <p>&nbsp&nbsp&nbspLos talleres de pilates se enfocarán en función de la experiencia de los asistentes, para los que no lo conozcan les servirá para descubrir algunos de los ejercicios de ésta técnica que propicia indudables beneficios para la salud del cuerpo y de la mente, y que si nos decidimos a practicar notaremos rápidamente sus efectos positivos.</br>&nbsp&nbsp&nbspSe fortalece la musculatura sin aumentar excesivamente el volumen muscular, especialmente en el abdomen y la espalda, aumentamos la flexibilidad articular, corrige nuestra postura, ayudando a la higiene postural, reduciendo los dolores de cuello, espalda y lumbares, no solo por la tonificación muscular, sino por la concienciación en eapectos posturales, la respiración y el euilibrio.</br>&nbsp&nbsp&nbspCon todo esto conseguiremos aumentar nuesta capacidad de moviminento, y por tanto nuestra libertad, podremos volver a hacer cosas que nuestro cuerpo no nos permitía a causa del sedentarismo.</br><a class="linkretorno" href="#volver">volver</a>
+        </p> 
+      </div>
+      <div class="lostomates">
+        <h2>Tomates</h2>
+        <img src="imagenes/infotomates.jpg">
+      </div>
+      <div class="tomateoculto">
+        
+        <p>&nbsp&nbsp&nbspRealizar tu propia conserva te permitirá tener una despensa más nutrida y aprovechar los recursos de temporada, y contribuirá a tu salud y a tu economía.</br>&nbsp&nbsp&nbspTodos sabemos que los productos de temporada tienen mejores propiedades nutritivas, ya que han madurado al sol de forma natural, adquiriendo un sabor característico, más intenso.</br>&nbsp&nbsp&nbspCada participante recibirá 4 tarros de conserva preparada por el mismo. Si desea llevarse más contidad deberá indicarlo en el momento de la inscripción, para que podamos realizar la compra de la materia prima con antelación en la lonja, ya que los fines de semana no abre.</br><a class="linkretorno" href="#volver">volver</a></br>
+        </p> 
+      </div>
+    </div>
+    
+    <div class="ventana formulario">
+
+        <div class="col-izq">
+                    <h1>Contacta</h1>
+                      <br></br>
+                      <p>Nombre: Magdalena Parreño</p>
+                      <p>Telefono movil: 666778877</p>
+                      <p>Email: epaho@hotmail.com</p>
+                      </br>
+                      <p>Nombre: Maribel Lopez</p>
+                      <p>Telefono movil: 677410026</p>
+                      
+                      
+                                            
+                      <p><small></small></p>
+                     
+        </div>            
+        <div class="col-md-4">
+                    <h1>Introduce tus datos</h1>
+                    
+                      <form id="ajaxForm" method="POST" enctype="multipart/form-data">
+
+                      <input class="form-control" type="text" id="ajax-name" name="name" placeholder="Nombre *" size="25" autocomplete="off" required>
+                    
+                      
+                      <input  class="form-control" type="text" id="ajax-surname" name="surname" placeholder="Apellidos *" size="25" autocomplete="off" required><br></br>
+                      
+                      <input class="form-control" type="email" id="ajax-email" name="email" placeholder="email *" size="25" autocomplete="off" required/>
+                      
+                      <input pattern="\d{9}" class="form-control" type="tel" id="ajax-phone" name="phone" placeholder="Teléfono *" size="25" autocomplete="off" required><br></br>
+
+                      <textarea class="form-control" id="ajax-text" type="text" rows="5" cols="25" placeholder="lo que quieras"></textarea>
+                      
+                      <p><small>* Campos obligatorios</small></p>
+                      
+                      
+                      <p><input type="submit" class="formsubmit" role="button" size="10" autocomplete="off" value="enviar"> <span id="ajax-info" class="return-info"></span></p>
+                    </form>
+
+        </div>
+    </div>
+
+     <div class="ventana formularioreservas">
+
+        <div class="reservas2">
+                    
+                    <h1>Haz tu reserva</h1>
+                    <form id="ajaxForm2" method="POST" enctype="multipart/form-data">
+
+                      
+
+                      <select class="form-control" id="ajax-personas" name="numeropersonas"   autocomplete="off" required>
+                        <option value="0">nº personas *</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas</option>
+                        <option value="6">6 personas</option>
+                        <option value="7">7 personas</option>
+                      </select>
+                      
+                      <select class="form-control" id="ajax-comidas" name="numerocomidas"   autocomplete="off" required>
+                        <option value="0">regimen comidas *</option>
+                        <option value="desayuno">solo desayuno</option>
+                        <option value="media pension">media pensión</option>
+                        <option value="pension completa">pensión completa</option>
+                        <option value="ninguna">ninguna</option>
+                      </select><br></br>
+                      
+                      <input class="form-control" type="text" id="ajax-fechainicio" name="fechainicio" placeholder="Fecha de entrada *" size="35" autocomplete="off" required>
+                    
+                      
+                      <input  class="form-control" type="text" id="ajax-fechafin" name="fechafin" placeholder="Fecha de salida *" size="35" autocomplete="off" required></br>
+
+                      <input class="form-control" type="text" id="ajax-primernombre" name="primernombre" placeholder="Nombre *" size="35" autocomplete="off" required>
+                     
+                      
+                      <input  class="form-control" type="text" id="ajax-apellidos" name="apellidos" placeholder="Apellidos *" size="35" autocomplete="off" required></br>
+                      
+                      <input class="form-control" type="email" id="ajax-correo" name="correo" placeholder="email *" size="35" autocomplete="off" required/>
+                      
+                      <input pattern="\d{9}" class="form-control" type="tel" id="ajax-telefono" name="telefono" placeholder="Teléfono" size="35" autocomplete="off"></br>
+                      
+                      <input type="submit" class="formsubmit" role="button" size="10" autocomplete="off" value="enviar"> <input type="reset" class="formsubmit" value="Borrar"></br><span id="ajax-informacion" class="return-info"></span><br></br>
+                      <p><small>* Campos obligatorios</small></p>
+                    </form>
+
+        </div>
+    </div>
+
+        <div class="ventana consultaprecios">
+
+             
+                <div class="col-izquierda">
+                  <h1>Precios</h1>
+                    <ul>
+                      <li>Tomates y Pilates es un pack de fin de semana en el que se realizan dos actividades: Clases de Pilates y envasado de Tomates u otro producto de temporada. el precio por persona es único: <strong>160 euros</strong>.
+                      </li>
+                      <li>Se podrá pernoctar en la casa sin coste adicional. El número máximo de plazas es de 7 y el mínimo es de 6. La entrada podrá hacerse el viernes para pernoctar o el sábado por la mañana.
+                      </li>
+                      <li>Se podrá contratar también el desayuno, la comida y la cena. Cada una de ellas supondrá un importe de <strong>6 euros p/p</strong>; por lo que la pensión completa serían <strong>18 euros p/p</strong>.
+                      </li>
+                      <li>Las sesiones de Pilates serán 2 el sábado y 1 el domingo. Las de conserva se realizarán 2 veces el sábado. </li>
+                    </ul>
+                 </div>
+                 
+        </div>
+     
+
+
+     <div id="piepagina">
+          <div class="opciones contacto">CONTACTO</div>
+          <div class="opciones comollegar">COMO LLEGAR</div>
+           <div class="fondopiepagina transparent"></div>
+      </div>
+    
+    <div id="capatransparente">
+    </div>
+    
+         
+        
+   
+    <script src='js/main.js'></script>
+    
+  </body>
+</html>
