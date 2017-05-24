@@ -1,8 +1,17 @@
 .header {
-	padding: 20px 0px 50px;
+	background-color: white;
+	min-height: $header-height;
+	  position: fixed;
+  width: 100%;
+  top: 0;
 	
+	.navbar{
+		margin: 10px 0px;
+
+	}
+
 	.navbar-brand{
-		padding-left: 0px;
+		padding: 5px 0;
 	}	
 
 	h1{
