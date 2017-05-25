@@ -27,78 +27,106 @@
     <div class="container">
 
       <nav class="navbar navbar-default">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-              <span class="sr-only">Opciones</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand logo" href="index.html">
-              <h1>Tomates y Pilates</h1>
-            </a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Opciones</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="index.html">
+            <h1>Tomates y Pilates</h1>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
 
-              <li class="active"><a href="#">Inicio</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Casa <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">La Casa Azul</a></li>
-                  <li><a href="#">El Entorno</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Actividades</a></li>
-              <li><a href="#">Fotografías</a></li>
-               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reservas <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Los precios</a></li>
-                  <li><a href="#">Las reservas</a></li>
-                </ul>
-              </li>
+            <li class="active"><a href="#">Inicio</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Casa <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#casa-azul">La Casa Azul</a></li>
+                <li><a href="#entorno">El Entorno</a></li>
+              </ul>
+            </li>
+            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#fotografias">Fotografías</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reservas <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#precios">Los precios</a></li>
+                <li><a href="#reservas">Las reservas</a></li>
+              </ul>
+            </li>
 
-            </ul>
-          </div>
-          <!--/.nav-collapse -->
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
       </nav>
 
     </div>
   </header>
 
   <main class="main" role="main">
-    <div class="container">
-      <div class="main-bg">
-        
+    <section id="home">
+      <div class="container">
+        <div class="main-bg">
+
+        </div>
       </div>
-    </div>
-  </main>
+    </section>
 
-  <footer class="footer" role="contentinfo">
-    <ul class="list-inline text-center">
-      <li><a href="#">CONTACTO</a></li>
-      <li><a href="#">COMO LLEGAR</a></li>
-    </ul>
-  </footer>
+    <section id="casa-azul">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="assets/img/casafoto.jpg" alt="" class="img-responsive">
+          </div>
+          <div class="col-md-7">
+            <p>
+             Las actividades se realizan en una antigua casa de labranza, de gruesos muros rehabilitada, que conserva algunas de sus peculiaridades mas originales: su estructura, la irregular forma de sus paredes, abultamientos y curiosas incrustaciones, así como el trazado antiguo del patio y de algunas estancias incluída la encantadora bodega donde se conservaba el aceite y el vino. 
+           </p>
+           <p>
+             Dispone de 5 dormitorios, 3 dobles y 2 triples, y de 3 baños completos, cocina, salón con chimenea y en el patio un pilón donde refrescarse y disfturar del sol tumbado en una hamaca. En el exterior existe un horno tradicional.
+           </p>
+           <p>
+             La casa está situada en un tranquilo valle, desde sus ventanas se contempla la sierra de Burete y los campos de olivos, almendros y melocotoneros. El aire siempre está impregnado por las plantas aromáticas autóctonas: romero, tomillo y espliego, al que se suman en primavera los aromas de la flor del almendro y de los frutales; en verano el de la propia fruta madurando.
+           </p>
+         </div>
+       </div>
+     </div>
+   </section>
 
-  <script src="assets/components/jquery/jquery.min.js"></script>
 
-  <script src="assets/components/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="assets/components/crossroads.min.js"></script>
 
-  <script src="assets/js/scripts.min.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <script>
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-XXXXX-X');ga('send','pageview');
-  </script>
+ </main>
+
+ <footer class="footer" role="contentinfo">
+  <ul class="list-inline text-center">
+    <li><a href="#">CONTACTO</a></li>
+    <li><a href="#">COMO LLEGAR</a></li>
+  </ul>
+</footer>
+
+<script src="assets/components/jquery/jquery.min.js"></script>
+
+<script src="assets/components/bootstrap/js/bootstrap.min.js"></script>
+
+<!--<script src="assets/components/crossroads.min.js"></script>-->
+
+<script src="assets/js/scripts.min.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
 
 </body>
 </html>
