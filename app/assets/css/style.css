@@ -45,7 +45,25 @@ body {
   background: url(../img/fondobody2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  color: white; }
+  body:before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; }
+
+main {
+  margin-top: 77px;
+  padding: 40px 0px; }
 
 footer {
   position: fixed;
