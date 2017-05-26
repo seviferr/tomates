@@ -4,7 +4,7 @@
 
 
 
-	/* Routing */
+	/* JS Routing */
 	function navigateTo(){
 		 var hash = location.hash.replace( /^#/, '' );
 		 $('body').attr('data-section', hash);
@@ -12,6 +12,8 @@
 
 
 	$(window).on('hashchange', navigateTo);
+
+	navigateTo();
 
 
 

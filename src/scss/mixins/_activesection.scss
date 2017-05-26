@@ -1,0 +1,6 @@
+@mixin activeSection () {
+  opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: 0.5s all ease-in-out;
+}

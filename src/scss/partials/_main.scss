@@ -1,24 +1,106 @@
 body{
-	 background: url(../img/fondobody2.jpg);
-		 background-repeat: no-repeat;
-		 background-size: cover;
-		 background-position: center center;
-		 color: white;
+	background: url(../img/fondobody2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: white;
 
-		 &:before{
-		 	content:'';
-		 	background-color: rgba(0,0,0,0.6);
-		 	top: 0;
-		 	left: 0;
-		 	right: 0;
-		 	bottom: 0;
-		 	position: absolute;
+	&:before{
+		content:'';
+		background-color: rgba(0,0,0,.8);
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
 
-		 	@include position(absolute, 0px 0px 0px 0px);
-		 }
+		@include position(absolute, 0px 0px 0px 0px);
+	}
 }
 
 main{
-	  margin-top: $header-height;
-	  padding:40px 0px;
+	margin-top: $header-height;
+	padding:40px 0px;
+}
+
+section{
+	opacity: 0;
+	visibility: hidden;
+	
+	transform: translateY(100px);
+
+	@include position(absolute, 50% auto auto auto)
+	width: 100%;
+	top: 50%;
+margin-top: -250px;
+
+
+}
+
+
+[data-section='casa-azul']{
+	section#casa-azul{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		transition: 0.5s all ease-in-out;
+
+
+	}
+}
+
+
+[data-section='el-entorno']{
+	section#el-entorno{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		transition: 0.5s all ease-in-out;
+
+
+	}
+}
+
+[data-section='actividades']{
+	section#actividades{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		transition: 0.5s all ease-in-out;
+
+
+	}
+}
+
+[data-section='fotografias']{
+	section#fotografias{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		transition: 0.5s all ease-in-out;
+
+
+	}
+}
+
+[data-section='precios']{
+	section#precios{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		transition: 0.5s all ease-in-out;
+
+
+	}
+}
+
+[data-section='reservas']{
+	section#reservas{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		transition: 0.5s all ease-in-out;
+
+
+	}
 }

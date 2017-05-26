@@ -1,9 +1,9 @@
 .header {
 	background-color: white;
 	min-height: $header-height;
-	  position: fixed;
-  width: 100%;
-  top: 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
 	
 	.navbar{
 		margin: 10px 0px;
@@ -25,6 +25,15 @@
 		&:first-letter{
 			color: red;
 			font-size: 50px;
+		}
+	}
+}
+
+
+@each $section in 'casa-azul' 'el-entorno' 'actividades' 'fotografias' 'precios' 'reservas' {
+	[data-section='#{$section}'] {
+		section##{$section}{
+			@include activeSection();
 		}
 	}
 }

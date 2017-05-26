@@ -20,6 +20,10 @@ body, html {
   min-height: 100vh;
   overflow: hidden; }
 
+h2 {
+  font-size: 40px;
+  margin-bottom: 50px; }
+
 .header {
   background-color: white;
   min-height: 77px;
@@ -41,6 +45,48 @@ body, html {
       color: red;
       font-size: 50px; }
 
+[data-section='casa-azul'] section#casa-azul {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='el-entorno'] section#el-entorno {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='actividades'] section#actividades {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='fotografias'] section#fotografias {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='precios'] section#precios {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='reservas'] section#reservas {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
 body {
   background: url(../img/fondobody2.jpg);
   background-repeat: no-repeat;
@@ -49,7 +95,7 @@ body {
   color: white; }
   body:before {
     content: '';
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     left: 0;
     right: 0;
@@ -64,6 +110,62 @@ body {
 main {
   margin-top: 77px;
   padding: 40px 0px; }
+
+section {
+  opacity: 0;
+  visibility: hidden;
+  -ms-transform: translateY(100px);
+      transform: translateY(100px);
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  top: 50%;
+  margin-top: -250px; }
+
+[data-section='casa-azul'] section#casa-azul {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='el-entorno'] section#el-entorno {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='actividades'] section#actividades {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='fotografias'] section#fotografias {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='precios'] section#precios {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='reservas'] section#reservas {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
 
 footer {
   position: fixed;
