@@ -12,7 +12,8 @@
   <link href="//ajax.googleapis.com" rel="dns-prefetch">
   
   <link href="assets/components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  
+  <link href="assets/components/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
 
   <link href="assets/css/style.min.css" rel="stylesheet">
 
@@ -22,6 +23,17 @@
 
 </head>
 <body>
+
+  <!-- Gallery lightbox dialog -->
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
 
   <header class="header" role="banner">
     <div class="container">
@@ -104,7 +116,7 @@
 
    <section id="el-entorno">
     <div class="container">
-        <h2 class="text-center">EL ENTORNO</h2>
+      <h2 class="text-center">EL ENTORNO</h2>
 
       <div class="row">
         <div class="col-md-5">
@@ -128,6 +140,133 @@
 
 
 
+ <section id="actividades">
+  <div class="container">
+    <h2 class="text-center">ACTIVIDADES</h2>
+
+    <div class="row">
+      <div class="col-md-5">
+        <img src="assets/img/envasadotomate.jpg" alt="" class="img-responsive">
+      </div>
+      <div class="col-md-7">
+        <p>
+         Aprende a hacer tu propia mermelada o conserva, (y llévatela a casa) con los mejores productos autóctonos de temporada -tomate, pimiento verde, melocotón,m etc.-, sin añadir ningún producto artificial como aditivo. Tienes la oportunidad de conciliarte con la naturaleza a través de los auténticos sabores tradicionales, experiencias, olores y colores. <strong>ESTO SE COMPLEMENTA CON TALLERES DE PILATES Y MEDITACIÓN</strong>.
+       </p>
+       <p>
+         Todo ello en un entorno ideal que invita al descanso, y al ocio que prefieras: leer, pasear, etc. Dedicado a personas que desean disfrutar de la tranquilidad del campo, lejos del frenesí de la ciudad o que simplemente quieren hacer una pausa diferente en su rutina.
+       </p>
+       <p>
+         No tenemos apenas cobertura de movil. Nevera, cocina y agua caliente son de gas. Te aseguramos una estancia y una experiencia en un lugar especial, alejado del frenesí, y donde sólo existirán el silencio, la paz y el sonido de la naturaleza, durante el tiempo que estés. Puedes venir con tus amigos o conocer nuevas personas.
+       </p>
+
+       <ul class="list-inline">
+        <li><a href="#pilates">info pilates...</a></li>
+        <li><a href="#tomates">info tomates...</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+
+</div>
+</section>
+
+
+
+<section id="pilates">
+  <div class="container">
+    <h2 class="text-center">PILATES</h2>
+
+    <div class="row">
+      <div class="col-md-5">
+        <img src="assets/img/infopilates.jpg" alt="" class="img-responsive">
+      </div>
+      <div class="col-md-7">
+
+        <p>
+         Los talleres de pilates se enfocarán en función de la experiencia de los asistentes, para los que no lo conozcan les servirá para descubrir algunos de los ejercicios de ésta técnica que propicia indudables beneficios para la salud del cuerpo y de la mente, y que si nos decidimos a practicar notaremos rápidamente sus efectos positivos.
+       </p>
+       <p>
+         Se fortalece la musculatura sin aumentar excesivamente el volumen muscular, especialmente en el abdomen y la espalda, aumentamos la flexibilidad articular, corrige nuestra postura, ayudando a la higiene postural, reduciendo los dolores de cuello, espalda y lumbares, no solo por la tonificación muscular, sino por la concienciación en eapectos posturales, la respiración y el euilibrio.
+       </p>
+       <p>
+         Con todo esto conseguiremos aumentar nuesta capacidad de moviminento, y por tanto nuestra libertad, podremos volver a hacer cosas que nuestro cuerpo no nos permitía a causa del sedentarismo.
+       </p>
+
+       <p>
+        <a href="#actividades">volver</a>
+      </p>
+
+    </div>
+  </div>
+
+
+</div>
+</section>
+
+
+
+
+<section id="tomates">
+  <div class="container">
+    <h2 class="text-center">TOMATES</h2>
+
+    <div class="row">
+      <div class="col-md-5">
+        <img src="assets/img/infotomates.jpg" alt="" class="img-responsive">
+      </div>
+      <div class="col-md-7">
+        <p>
+         Realizar tu propia conserva te permitirá tener una despensa más nutrida y aprovechar los recursos de temporada, y contribuirá a tu salud y a tu economía.
+       </p>
+
+       <p>
+         Todos sabemos que los productos de temporada tienen mejores propiedades nutritivas, ya que han madurado al sol de forma natural, adquiriendo un sabor característico, más intenso.
+       </p>
+
+       <p>
+         Cada participante recibirá 4 tarros de conserva preparada por el mismo. Si desea llevarse más contidad deberá indicarlo en el momento de la inscripción, para que podamos realizar la compra de la materia prima con antelación en la lonja, ya que los fines de semana no abre.
+       </p>
+
+       <p>
+        <a href="#actividades">volver</a>
+      </p>
+
+    </div>
+  </div>
+
+
+</div>
+</section>
+
+<section id="fotografias">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img data-gallery="patio" class="img-responsive" src="assets/img/patio.jpg" alt="">
+        <h3>Exteriores</h3>
+      </div>
+      <div class="col-md-3">
+        <img  data-gallery="entorno" class="img-responsive" src="assets/img/exteriores.jpg" alt="">
+        <h3>Entorno</h3>
+      </div>
+      <div class="col-md-3">
+        <img data-gallery="habitaciones" class="img-responsive" src="assets/img/habitaciones.jpg" alt="">
+        <h3>Habitaciones</h3>
+      </div>
+      <div class="col-md-3">
+        <img data-gallery="actividades" class="img-responsive" src="assets/img/actividades.jpg" alt="">
+        <h3>Actividades</h3>
+      </div>
+
+    </div>
+
+</div>
+</section>
+
+
+
+
 
 </main>
 
@@ -140,10 +279,9 @@
 
 <script src="assets/components/jquery/jquery.min.js"></script>
 
+
 <script src="assets/components/bootstrap/js/bootstrap.min.js"></script>
-
-<!--<script src="assets/components/crossroads.min.js"></script>-->
-
+<script src="assets/components/blueimp/js/blueimp-gallery.min.js"></script>
 <script src="assets/js/scripts.min.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

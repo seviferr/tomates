@@ -1,0 +1,19 @@
+.blueimp-gallery{
+
+	background-image: url(../img/fondotomate.png);
+	background-size: cover;
+
+&>.close{
+	font-family: Arial;
+}
+
+
+&>.title{
+	@include position(absolute, 15px auto auto auto);
+	width: 100%;
+	text-align: center;
+}
+
+}
+
+

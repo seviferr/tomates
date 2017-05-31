@@ -38,69 +38,11 @@ margin-top: -250px;
 }
 
 
-[data-section='casa-azul']{
-	section#casa-azul{
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-		transition: 0.5s all ease-in-out;
-
-
+@each $section in 'casa-azul' 'el-entorno' 'actividades' 'pilates' 'tomates' 'fotografias' 'precios' 'reservas' 'contacto' 'como-llegar' {
+	[data-section='#{$section}'] {
+		section##{$section}{
+			@include activeSection();
+		}
 	}
 }
 
-
-[data-section='el-entorno']{
-	section#el-entorno{
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-		transition: 0.5s all ease-in-out;
-
-
-	}
-}
-
-[data-section='actividades']{
-	section#actividades{
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-		transition: 0.5s all ease-in-out;
-
-
-	}
-}
-
-[data-section='fotografias']{
-	section#fotografias{
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-		transition: 0.5s all ease-in-out;
-
-
-	}
-}
-
-[data-section='precios']{
-	section#precios{
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-		transition: 0.5s all ease-in-out;
-
-
-	}
-}
-
-[data-section='reservas']{
-	section#reservas{
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-		transition: 0.5s all ease-in-out;
-
-
-	}
-}

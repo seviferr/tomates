@@ -24,6 +24,20 @@ h2 {
   font-size: 40px;
   margin-bottom: 50px; }
 
+.blueimp-gallery {
+  background-image: url(../img/fondotomate.png);
+  background-size: cover; }
+  .blueimp-gallery > .close {
+    font-family: Arial; }
+  .blueimp-gallery > .title {
+    position: absolute;
+    top: 15px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    text-align: center; }
+
 .header {
   background-color: white;
   min-height: 77px;
@@ -44,48 +58,6 @@ h2 {
     .header h1:first-letter {
       color: red;
       font-size: 50px; }
-
-[data-section='casa-azul'] section#casa-azul {
-  opacity: 1;
-  visibility: visible;
-  -ms-transform: translateY(0);
-      transform: translateY(0);
-  transition: 0.5s all ease-in-out; }
-
-[data-section='el-entorno'] section#el-entorno {
-  opacity: 1;
-  visibility: visible;
-  -ms-transform: translateY(0);
-      transform: translateY(0);
-  transition: 0.5s all ease-in-out; }
-
-[data-section='actividades'] section#actividades {
-  opacity: 1;
-  visibility: visible;
-  -ms-transform: translateY(0);
-      transform: translateY(0);
-  transition: 0.5s all ease-in-out; }
-
-[data-section='fotografias'] section#fotografias {
-  opacity: 1;
-  visibility: visible;
-  -ms-transform: translateY(0);
-      transform: translateY(0);
-  transition: 0.5s all ease-in-out; }
-
-[data-section='precios'] section#precios {
-  opacity: 1;
-  visibility: visible;
-  -ms-transform: translateY(0);
-      transform: translateY(0);
-  transition: 0.5s all ease-in-out; }
-
-[data-section='reservas'] section#reservas {
-  opacity: 1;
-  visibility: visible;
-  -ms-transform: translateY(0);
-      transform: translateY(0);
-  transition: 0.5s all ease-in-out; }
 
 body {
   background: url(../img/fondobody2.jpg);
@@ -146,6 +118,20 @@ section {
       transform: translateY(0);
   transition: 0.5s all ease-in-out; }
 
+[data-section='pilates'] section#pilates {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='tomates'] section#tomates {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
 [data-section='fotografias'] section#fotografias {
   opacity: 1;
   visibility: visible;
@@ -167,12 +153,29 @@ section {
       transform: translateY(0);
   transition: 0.5s all ease-in-out; }
 
+[data-section='contacto'] section#contacto {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
+[data-section='como-llegar'] section#como-llegar {
+  opacity: 1;
+  visibility: visible;
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  transition: 0.5s all ease-in-out; }
+
 footer {
   position: fixed;
   background-color: white;
   width: 100%;
   bottom: 0;
   padding: 5px 0px; }
+
+#fotografias img[data-gallery] {
+  cursor: pointer; }
 
 @font-face {
   font-family: 'Font-Name';

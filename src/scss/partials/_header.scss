@@ -30,10 +30,19 @@
 }
 
 
-@each $section in 'casa-azul' 'el-entorno' 'actividades' 'fotografias' 'precios' 'reservas' {
-	[data-section='#{$section}'] {
-		section##{$section}{
-			@include activeSection();
-		}
-	}
-}
+// @each $section in 'casa-azul' 'el-entorno' 'actividades' 'pilates' 'tomates' 'fotografias' 'precios' 'reservas' 'contacto' 'como-llegar' {
+// 	[data-section='#{$section}'] {
+
+// 		.navbar-nav > a[href='##{$section}']{
+// 			color: grey;
+// 			background-color: black;
+// 		}
+		
+// 	}
+// }
+
+// a[href$='actividades']{
+// 	color: red;
+// }
+
+

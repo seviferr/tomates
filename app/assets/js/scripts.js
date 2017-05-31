@@ -1,13 +1,13 @@
 (function ($, window, document, undefined) {
 
-	  'use strict';
+	'use strict';
 
 
 
 	/* JS Routing */
 	function navigateTo(){
-		 var hash = location.hash.replace( /^#/, '' );
-		 $('body').attr('data-section', hash);
+		var hash = location.hash.replace( /^#/, '' );
+		$('body').attr('data-section', hash);
 	}
 
 
@@ -71,7 +71,175 @@
 	 //  });
 
 
+/* Setting up blueimp galleries */
+
+var galleryData = {
+
+	actividades : [
+
+	{
+		title: 'Relajación',
+		href: 'assets/img/gallery/actividades/actividades0.jpg'
+	},
+
+	{
+		title: 'Saludo al sol',
+		href: 'assets/img/gallery/actividades/actividades1.jpg'
+	},
+
+		{
+		title: 'Melocotón en conserva',
+		href: 'assets/img/gallery/actividades/actividades2.jpg'
+	},
+
+	
+
+		{
+		title: 'Con la profe detrás',
+		href: 'assets/img/gallery/actividades/actividades3.jpg'
+	},
+
+		{
+		title: 'Preparando la fruta',
+		href: 'assets/img/gallery/actividades/actividades4.jpg'
+	},
+
+		{
+		title: 'Preparación de la conserva',
+		href: 'assets/img/gallery/actividades/actividades5.jpg'
+	},
+
+		{
+		title: 'Frutas recogidas',
+		href: 'assets/img/gallery/actividades/actividades6.jpg'
+	},
+
+		{
+		title: 'Sabado: practicando en el agua',
+		href: 'assets/img/gallery/actividades/actividades7.jpg'
+	},
 
 
 
-	})(jQuery, window, document);
+
+	],
+
+
+
+	entorno : [
+	{
+		title: 'Arrozales de Calasparra',
+		href: 'assets/img/gallery/entorno/entorno0.jpg'
+	},
+
+	{
+		title: 'Comienza la primavera',
+		href: 'assets/img/gallery/entorno/entorno1.jpg'
+	},
+
+	{
+		title: 'Frutales desde la casa',
+		href: 'assets/img/gallery/entorno/entorno2.jpg'
+	},
+
+	{
+		title: 'El valle de Burete',
+		href: 'assets/img/gallery/entorno/entorno3.jpg'
+	},
+
+	{
+		title: 'Mochón de Cieza',
+		href: 'assets/img/gallery/entorno/entorno4.jpg'
+	},
+
+	{
+		title: 'Camino hacia la casa',
+		href: 'assets/img/gallery/entorno/entorno5.jpg'
+	},
+
+	{
+		title: 'Cehegín',
+		href: 'assets/img/gallery/entorno/entorno6.jpg'
+	},
+	
+	{
+		title: 'Vistas del valle',
+		href: 'assets/img/gallery/entorno/entorno7.jpg'
+	}
+
+
+	],
+
+	habitaciones : [
+
+	{
+		title: 'Dormitorio suite',
+		href: 'assets/img/gallery/habitaciones/habitaciones0.jpg'
+	},
+
+	{
+		title: 'Cuarto bodega aceite',
+		href: 'assets/img/gallery/habitaciones/habitaciones1.jpg'
+	},
+
+	{
+		title: 'Dormitorio primera planta',
+		href: 'assets/img/gallery/habitaciones/habitaciones2.jpg'
+	},
+
+	{
+		title: 'Dormitorio primera planta',
+		href: 'assets/img/gallery/habitaciones/habitaciones3.jpg'
+	},
+
+	{
+		title: 'Chimenea del salon',
+		href: 'assets/img/gallery/habitaciones/habitaciones4.jpg'
+	},
+
+	{
+		title: 'Dormitorio principal primera planta',
+		href: 'assets/img/gallery/habitaciones/habitaciones5.jpg'
+	},
+
+	{
+		title: 'Baño primera planta',
+		href: 'assets/img/gallery/habitaciones/habitaciones6.jpg'
+	},
+
+	{
+		title: 'Cocina',
+		href: 'assets/img/gallery/habitaciones/habitaciones7.jpg'
+	},
+
+
+
+	],
+
+	patio : [
+	'assets/img/gallery/patio/patio0.jpg',
+	'assets/img/gallery/patio/patio1.jpg',
+	'assets/img/gallery/patio/patio2.jpg',
+	'assets/img/gallery/patio/patio3.jpg',
+	'assets/img/gallery/patio/patio4.jpg',
+	'assets/img/gallery/patio/patio5.jpg',
+	'assets/img/gallery/patio/patio6.jpg',
+	'assets/img/gallery/patio/patio7.jpg'
+
+	]
+
+}
+
+
+
+$('*[data-gallery]').click(function(){
+	console.log($(this).attr('data-gallery'));
+	blueimp.Gallery(galleryData[$(this).attr('data-gallery')]);
+
+})
+
+
+
+
+
+})(jQuery, window, document);
