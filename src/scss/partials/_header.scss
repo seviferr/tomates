@@ -5,6 +5,8 @@
 	width: 100%;
 	top: 0;
 	
+    z-index: 1;
+
 	.navbar{
 		margin: 10px 0px;
 
@@ -30,19 +32,5 @@
 }
 
 
-// @each $section in 'casa-azul' 'el-entorno' 'actividades' 'pilates' 'tomates' 'fotografias' 'precios' 'reservas' 'contacto' 'como-llegar' {
-// 	[data-section='#{$section}'] {
-
-// 		.navbar-nav > a[href='##{$section}']{
-// 			color: grey;
-// 			background-color: black;
-// 		}
-		
-// 	}
-// }
-
-// a[href$='actividades']{
-// 	color: red;
-// }
 
 

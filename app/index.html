@@ -15,6 +15,8 @@
   
   <link href="assets/components/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="assets/components/jqueryui/jquery-ui.css">
+
   <link href="assets/css/style.min.css" rel="stylesheet">
 
 
@@ -33,7 +35,7 @@
     <a class="close">×</a>
     <a class="play-pause"></a>
     <ol class="indicator"></ol>
-</div>
+  </div>
 
   <header class="header" role="banner">
     <div class="container">
@@ -90,7 +92,7 @@
 
     <section id="casa-azul">
       <div class="container">
-        <h2 class="text-center">LA CASA AZUL</h2>
+        <h2>LA CASA AZUL</h2>
         <div class="row">
           <div class="col-md-5">
 
@@ -116,7 +118,7 @@
 
    <section id="el-entorno">
     <div class="container">
-      <h2 class="text-center">EL ENTORNO</h2>
+      <h2 >EL ENTORNO</h2>
 
       <div class="row">
         <div class="col-md-5">
@@ -142,7 +144,7 @@
 
  <section id="actividades">
   <div class="container">
-    <h2 class="text-center">ACTIVIDADES</h2>
+    <h2 >ACTIVIDADES</h2>
 
     <div class="row">
       <div class="col-md-5">
@@ -175,7 +177,7 @@
 
 <section id="pilates">
   <div class="container">
-    <h2 class="text-center">PILATES</h2>
+    <h2 >PILATES</h2>
 
     <div class="row">
       <div class="col-md-5">
@@ -209,7 +211,7 @@
 
 <section id="tomates">
   <div class="container">
-    <h2 class="text-center">TOMATES</h2>
+    <h2 >TOMATES</h2>
 
     <div class="row">
       <div class="col-md-5">
@@ -261,8 +263,169 @@
 
     </div>
 
-</div>
+  </div>
 </section>
+
+
+
+<section id="precios">
+  <div class="container">    
+    <p>
+      Tomates y Pilates es un pack de fin de semana en el que se realizan dos actividades: Clases de Pilates y envasado de Tomates u otro producto de temporada. el precio por persona es único: 160 euros.
+    </p>
+
+    <p>
+      Se podrá pernoctar en la casa sin coste adicional. El número máximo de plazas es de 7 y el mínimo es de 6. La entrada podrá hacerse el viernes para pernoctar o el sábado por la mañana.
+    </p>
+
+    <p>
+      Se podrá contratar también el desayuno, la comida y la cena. Cada una de ellas supondrá un importe de 6 euros p/p; por lo que la pensión completa serían 18 euros p/p.
+    </p>
+
+    <p>
+      Las sesiones de Pilates serán 2 el sábado y 1 el domingo. Las de conserva se realizarán 2 veces el sábado.
+    </p>
+  </div>  
+</section>
+
+
+<section id="reservas">
+  <div class="container">   
+    <h2>RESERVAS</h2> 
+    <form id="ajaxForm2" method="POST" enctype="multipart/form-data">
+
+      <div class="row">
+        <div class="col-sm-6">
+         <select class="form-control" id="ajax-personas" name="numeropersonas"   autocomplete="off" required>
+          <option value="">nº personas *</option>
+          <option value="1">1 persona</option>
+          <option value="2">2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+          <option value="6">6 personas</option>
+          <option value="7">7 personas</option>
+        </select>
+      </div>
+
+
+      <div class="col-sm-6">
+
+        <select class="form-control" id="ajax-comidas" name="numerocomidas"   autocomplete="off" required>
+          <option value="">regimen comidas *</option>
+          <option value="desayuno">solo desayuno</option>
+          <option value="media pension">media pensión</option>
+          <option value="pension completa">pensión completa</option>
+          <option value="ninguna">ninguna</option>
+        </select>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <input class="form-control" type="text" id="ajax-fechainicio" name="fechainicio" placeholder="Fecha de entrada *" size="35" autocomplete="off" required>
+      </div>
+      <div class="col-sm-6">
+        <input  class="form-control" type="text" id="ajax-fechafin" name="fechafin" placeholder="Fecha de salida *" size="35" autocomplete="off" required disabled>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-sm-6">
+        <input class="form-control" type="text" id="ajax-primernombre" name="primernombre" placeholder="Nombre *" size="35" autocomplete="off" required>
+
+      </div>
+      <div class="col-sm-6">
+        <input  class="form-control" type="text" id="ajax-apellidos" name="apellidos" placeholder="Apellidos *" size="35" autocomplete="off" required></br>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+       <input class="form-control" type="email" id="ajax-correo" name="correo" placeholder="email *" size="35" autocomplete="off" required/>
+     </div>
+     <div class="col-sm-6">
+      <input pattern="\d{9}" class="form-control" type="tel" id="ajax-telefono" name="telefono" placeholder="Teléfono" size="35" autocomplete="off">
+    </div>
+  </div>
+
+
+
+
+
+  <input type="submit" class="formsubmit btn btn-success" role="button" size="10" autocomplete="off" value="enviar"> <input type="reset" class="formsubmit btn btn-danger" value="Borrar"></br><span id="ajax-informacion" class="return-info"></span>
+
+
+
+
+  <p><small>* Campos obligatorios</small></p>
+</form>
+</div>  
+</section>
+
+<section id="contacto">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-6">
+        <h3>Contacta</h3>
+
+
+        <p>
+          <strong>Nombre:</strong> Magdalena Parreño <br>
+          <strong>Telefono movil:</strong> 666138323 <br>
+          <strong>Email:</strong> <a href="mailto:epaho@hotmail.com">epaho@hotmail.com</a>
+        </p>
+
+        <p>
+          <strong>Nombre:</strong> Maribel Lopez <br>
+          <strong>Telefono movil:</strong> 677410026
+        </p>
+      </div>
+
+      <div class="col-sm-6">
+
+        <h3>
+          Introduce tus datos
+        </h3>
+
+        <form id="ajaxForm" method="POST" enctype="multipart/form-data">
+
+          <input class="form-control" type="text" id="ajax-name" name="name" placeholder="Nombre *" size="25" autocomplete="off" required="">
+
+
+          <input class="form-control" type="text" id="ajax-surname" name="surname" placeholder="Apellidos *" size="25" autocomplete="off" required=""><br><br>
+
+          <input class="form-control" type="email" id="ajax-email" name="email" placeholder="email *" size="25" autocomplete="off" required="">
+
+          <input pattern="\d{9}" class="form-control" type="tel" id="ajax-phone" name="phone" placeholder="Teléfono *" size="25" autocomplete="off" required=""><br><br>
+
+          <textarea class="form-control" id="ajax-text" type="text" rows="5" cols="25" placeholder="lo que quieras"></textarea>
+
+          <p><small>* Campos obligatorios</small></p>
+
+
+          <p><input type="submit" class="formsubmit btn btn-success" role="button" size="10" autocomplete="off" value="enviar"> <span id="ajax-info" class="return-info"></span></p>
+        </form>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="como-llegar">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59769.852033353985!2d-1.8349495694479234!3d38.06418833661171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6454660398dd41%3A0x1a6224dd81f81255!2s30430+Burete%2C+Murcia!5e0!3m2!1ses!2ses!4v1465843675075"frameborder="0"></iframe>
+</section>
+
+
 
 
 
@@ -272,12 +435,16 @@
 
 <footer class="footer" role="contentinfo">
   <ul class="list-inline text-center">
-    <li><a href="#">CONTACTO</a></li>
-    <li><a href="#">COMO LLEGAR</a></li>
+    <li><a href="#contacto">CONTACTO</a></li>
+    <li><a href="#como-llegar">COMO LLEGAR</a></li>
   </ul>
 </footer>
 
 <script src="assets/components/jquery/jquery.min.js"></script>
+
+<script src="assets/components/jqueryui/jquery-ui.js"></script>
+<script src="assets/components/jqueryui/jquery.ui.datepicker-es.js"></script>
+
 
 
 <script src="assets/components/bootstrap/js/bootstrap.min.js"></script>
