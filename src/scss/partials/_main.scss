@@ -1,47 +1,121 @@
-body{
-	background: url(../img/fondobody2.jpg);
+
+main{
+	background: url(../img/slides/fondobody.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center center;
-	color: white;
+	background-position: center right;
+	position: relative;
+
+	height: 650px;
+
 
 	&:before{
-		content:'';
-		background-color: rgba(0,0,0,.8);
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		position: absolute;
+		@include overlay();
 
 		@include position(absolute, 0px 0px 0px 0px);
 	}
+	
+
+	@media(max-width: 1200px){
+		
+	height: 750px;
+
+
+	}
+
+	@media(max-width: 990px){
+
+		.txt-image{
+			margin-bottom: 20px;
+		}
+	}
+
+	@media(max-width: 990px){
+		height: auto;
+
+		
+
+		&:before{
+			display: none;
+		}
+	}
+
+
+	
 }
 
-main{
-	margin-top: $header-height;
-	padding:40px 0px;
-}
+
+
 
 section{
 	opacity: 0;
 	visibility: hidden;
-	
+	padding-top: 40px;
+		
+
+	@include position(absolute, 0px 0px auto 0px)
 	transform: translateY(100px);
 
-	@include position(absolute, 50% auto auto auto)
-	width: 100%;
-	top: 50%;
-margin-top: -250px;
+	&#inicio{
+		transform:translateY(0);
+	}
 
+
+	
+
+	@media(max-width: 990px){
+		padding-top: 10px;
+		z-index: 2;
+		display: none;
+
+		background-color: rgba(0,0,0,.8);
+	}
 
 }
 
+body{
+	
 
-@each $section in 'casa-azul' 'el-entorno' 'actividades' 'pilates' 'tomates' 'fotografias' 'precios' 'reservas' 'contacto' 'como-llegar' {
+
+	&[data-section='inicio'] main, &[data-section='como-llegar'] main{
+
+
+
+		&:before{
+		display: none;
+			
+		}
+
+		@media(max-width: 990px){
+			height: 100%;
+		}
+
+	
+
+		
+	}
+
+
+
+
+	
+}
+
+
+
+
+
+@each $section in 'inicio' 'casa-azul' 'el-entorno' 'actividades' 'pilates' 'tomates' 'fotografias' 'precios' 'reservas' 'contacto' 'como-llegar' {
 	[data-section='#{$section}'] {
 		section##{$section}{
 			@include activeSection();
+
+			@if($section == 'como-llegar'){
+
+				position: absolute;
+			}
+
+
 		}
 	}
 }

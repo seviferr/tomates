@@ -1,25 +1,33 @@
 * {
-  box-sizing: border-box;
+/*  box-sizing: border-box;
   font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;*/
 }
 
 body {
-  font: 300 16px/1.6 'Indie Flower', serif;
+  font: 300 15px 'Indie Flower', serif;
 
-  color: #444;
-  	font-size: 17px;
+  color: white;
+  padding-top: $header-height;
 
+
+    background-color: #080808;
  
 }
 body,html{
 	min-height: 100vh;
-	overflow: hidden;
+  
+
+  height: 100%;
+
 }
+
+
+
 
 h2{
 	    font-size: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
     font-weight: bold;
 }

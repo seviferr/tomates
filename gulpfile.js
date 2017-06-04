@@ -18,7 +18,7 @@ gulp.task('css', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 4 version'))
     .pipe(gulp.dest('app/assets/css'))
-    .pipe(cssnano())
+    .pipe(cssnano({zindex: false}))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/css'))
