@@ -1,29 +1,28 @@
 
 main{
-	background: url(../img/slides/fondobody.jpeg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center right;
-	position: relative;
+	// background: url(../img/slides/fondobody.jpeg);
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: center right;
 
-	height: 650px;
+
+	position: relative;
+	// overflow: hidden;
+
+	height: 100%;
+
 
 
 	&:before{
 		@include overlay();
 
-		@include position(absolute, 0px 0px 0px 0px);
 	}
 	
 
-	@media(max-width: 1200px){
-		
-	height: 750px;
-
-
-	}
 
 	@media(max-width: 990px){
+
+		background-image: none;
 
 		.txt-image{
 			margin-bottom: 20px;
@@ -36,7 +35,7 @@ main{
 		
 
 		&:before{
-			display: none;
+			// display: none;
 		}
 	}
 
@@ -50,8 +49,11 @@ main{
 section{
 	opacity: 0;
 	visibility: hidden;
+	height: 0;
+	overflow: hidden;
 	padding-top: 40px;
-		
+	padding-bottom: 50px;
+
 
 	@include position(absolute, 0px 0px auto 0px)
 	transform: translateY(100px);
@@ -66,9 +68,10 @@ section{
 	@media(max-width: 990px){
 		padding-top: 10px;
 		z-index: 2;
-		display: none;
+		// display: none;
+		// visibility: hidden;
 
-		background-color: rgba(0,0,0,.8);
+		
 	}
 
 }
@@ -82,7 +85,7 @@ body{
 
 
 		&:before{
-		display: none;
+			opacity: 0;
 			
 		}
 
@@ -90,7 +93,7 @@ body{
 			height: 100%;
 		}
 
-	
+
 
 		
 	}
@@ -110,9 +113,14 @@ body{
 		section#section-#{$section}{
 			@include activeSection();
 
-			@if($section == 'section-como-llegar'){
+			@if($section == 'como-llegar'){
 
-				position: absolute;
+				height: 100%;
+			}
+
+			@if($section == 'inicio'){
+position: absolute;
+				height: 100%;
 			}
 
 

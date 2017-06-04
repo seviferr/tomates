@@ -1,7 +1,13 @@
 footer{
-	position: relative;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+    background-color: $bgcolor;
+
+
 	z-index: 10;
-	padding: 15px 0px;
+	padding: 10px 0px;	
+	height: $footer-height;
 
 	a{
 		color:white;

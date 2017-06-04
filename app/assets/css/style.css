@@ -16,7 +16,18 @@ body {
   font: 300 15px 'Indie Flower', serif;
   color: white;
   padding-top: 80px;
-  background-color: #080808; }
+  padding-bottom: 50px;
+  background-color: #080808;
+  background: url(../img/slides/fondobody.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  background-attachment: fixed; }
+  @media (max-width: 990px) {
+    body {
+      height: auto; }
+      body[data-section='como-llegar'] {
+        height: 100%; } }
 
 body, html {
   min-height: 100vh;
@@ -27,6 +38,9 @@ h2 {
   margin-bottom: 40px;
   text-align: center;
   font-weight: bold; }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 30px; } }
 
 h3 {
   font-weight: bold; }
@@ -127,9 +141,6 @@ h3 {
 .carousel-fade .carousel-control {
   z-index: 2; }
 
-.carousel-control.left, .carousel-control.right {
-  background-image: none; }
-
 .item {
   background-size: cover;
   background-position: center center; }
@@ -138,13 +149,25 @@ h3 {
   background-image: url(../img/slides/fondobody.jpeg); }
 
 #slide1 {
-  background-image: url(../img/slides/slide1.jpg); }
+  background-image: url(../img/slides/slide1.jpg);
+  background-position: center bottom; }
 
 #slide2 {
   background-image: url(../img/slides/slide2.jpg); }
 
 #slide3 {
   background-image: url(../img/slides/slide3.jpg); }
+
+@media (max-width: 990px) {
+  #slide0 {
+    background-image: url(../img/slides/slide0-mobile.jpg); }
+  #slide1 {
+    background-image: url(../img/slides/slide1-mobile.jpg); }
+  #slide2 {
+    background-image: url(../img/slides/slide2-mobile.jpg);
+    background-position: center top; }
+  #slide3 {
+    background-image: url(../img/slides/slide3-mobile.jpg); } }
 
 #section-inicio {
   top: 0;
@@ -294,12 +317,8 @@ h3 {
   cursor: default; }
 
 main {
-  background: url(../img/slides/fondobody.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
   position: relative;
-  height: 650px; }
+  height: 100%; }
   main:before {
     content: '';
     background-color: rgba(0, 0, 0, 0.8);
@@ -307,28 +326,25 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    position: absolute;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px; }
-  @media (max-width: 1200px) {
-    main {
-      height: 750px; } }
-  @media (max-width: 990px) {
-    main .txt-image {
-      margin-bottom: 20px; } }
+    position: fixed;
+    opacity: 1;
+    transition: .5s opacity ease-in-out; }
   @media (max-width: 990px) {
     main {
-      height: auto; }
-      main:before {
-        display: none; } }
+      background-image: none; }
+      main .txt-image {
+        margin-bottom: 20px; } }
+  @media (max-width: 990px) {
+    main {
+      height: auto; } }
 
 section {
   opacity: 0;
   visibility: hidden;
+  height: 0;
+  overflow: hidden;
   padding-top: 40px;
+  padding-bottom: 50px;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -342,12 +358,10 @@ section {
   @media (max-width: 990px) {
     section {
       padding-top: 10px;
-      z-index: 2;
-      display: none;
-      background-color: rgba(0, 0, 0, 0.8); } }
+      z-index: 2; } }
 
 body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:before {
-  display: none; }
+  opacity: 0; }
 
 @media (max-width: 990px) {
   body[data-section='inicio'] main, body[data-section='como-llegar'] main {
@@ -356,10 +370,13 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='inicio'] section#section-inicio {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
-  position: relative; }
+  position: relative;
+  position: absolute;
+  height: 100%; }
   @media (max-width: 990px) {
     [data-section='inicio'] section#section-inicio {
       display: block; } }
@@ -367,6 +384,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='casa-azul'] section#section-casa-azul {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -378,6 +396,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='el-entorno'] section#section-el-entorno {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -389,6 +408,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='actividades'] section#section-actividades {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -400,6 +420,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='pilates'] section#section-pilates {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -411,6 +432,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='tomates'] section#section-tomates {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -422,6 +444,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='fotografias'] section#section-fotografias {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -433,6 +456,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='precios'] section#section-precios {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -444,6 +468,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='reservas'] section#section-reservas {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -455,6 +480,7 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='contacto'] section#section-contacto {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
@@ -466,18 +492,24 @@ body[data-section='inicio'] main:before, body[data-section='como-llegar'] main:b
 [data-section='como-llegar'] section#section-como-llegar {
   opacity: 1;
   visibility: visible;
+  height: auto;
   -ms-transform: translateY(0);
       transform: translateY(0);
   transition: 0.5s all ease-in-out;
-  position: relative; }
+  position: relative;
+  height: 100%; }
   @media (max-width: 990px) {
     [data-section='como-llegar'] section#section-como-llegar {
       display: block; } }
 
 footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #080808;
   z-index: 10;
-  padding: 15px 0px; }
+  padding: 10px 0px;
+  height: 50px; }
   footer a {
     color: white; }
 
@@ -493,6 +525,10 @@ footer {
   #section-fotografias h3 {
     text-align: center;
     font-size: 20px; }
+    @media (max-width: 990px) {
+      #section-fotografias h3 {
+        font-size: 17px;
+        margin-bottom: 40px; } }
   #section-fotografias img[data-gallery] {
     cursor: pointer; }
 
