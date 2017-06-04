@@ -17,6 +17,8 @@ logs
 results
 npm-debug.log
 node_modules
+material
+Gallery-master
 
 ## Bower
 src/components
