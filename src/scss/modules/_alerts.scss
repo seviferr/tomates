@@ -1,0 +1,40 @@
+#loading-overlay{
+	display: none;
+	z-index: 100;
+	background: rgba(0,0,0,0.5);
+
+	@include position(fixed, 0px 0px 0px 0px);
+
+	&>div{
+		@include position(absolute, 50% auto auto 50%);
+		margin-left: -80px;
+		margin-top: -91px;
+		text-align: center;
+		font-size: 22px;
+	}
+}
+
+#alert-wrap{
+
+	position: relative;
+
+
+	.alert{
+		z-index: 200;
+		position: absolute;
+
+		
+		@include position(absolute, 13px 0px auto auto);
+
+		overflow: hidden;
+
+		.close{
+			font-size: 20px;
+		}
+
+	}
+
+
+
+}
+

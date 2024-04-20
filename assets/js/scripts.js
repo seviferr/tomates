@@ -277,7 +277,47 @@
 		}, lifeSpan);
 
 	}
+	$('.js-form-google').on('submit', function(e){
+		console.log("asdsadadsda");
+		e.preventDefault();
+		const form = $(this);
+		const urlParams = form.serialize();
+		const formType = form.attr("data-form-type");
+		console.log({formType});
+		const config = {
+			reservations: {
+				message: "¡Enviado!",
+				formId: "1FAIpQLSc7vfG9BVg8SRBGfKUyCVCzqEWznAZH11yzh1Ddviqi8mnCeA",
+			},
+			contact: {
+				message: "¡Enviado!",
+				formId: "1FAIpQLSdNcWM0jJnoygZzNmbIiRIBMWBFVBpjgIae8Szx66HYk7veAw",
+			},
+		};
+		const url = `https://docs.google.com/forms/d/e/${config[formType].formId}/formResponse?submit=pp_url&${urlParams}`
+		$('#loading-overlay').fadeIn();
+		fetch(url, {
+		  method: "GET",
+		  mode: "no-cors",
+		  header: {
+			'Content-Type': 'application/json'
+		  },
+		  data: form.serialize()
+		})
+		.then(data => {
+			spawnAlert('Gracias por realizar su reserva. Nos pondremos en contacto.', 'success', 'ok');
+		})
+		.catch(err => {
+			spawnAlert('Error en el envío del formulario', 'danger', 'remove');	
+		})
+		.finally(() => {
+			$('#loading-overlay').fadeOut();
+		})
+	
+	});
 
+	
+	/** 
 	$('form').on('submit', function(){
 
 		var form = $(this);
@@ -288,17 +328,18 @@
 		// form.addClass('loading');
 		// info.html('<img src="assets/img/loading.gif" />');
 
-		$('#loading-overlay').fadeIn();
+		//$('#loading-overlay').fadeIn();
 		
-
-	
+		console.log({data, action});
 
 		$.ajax({
 
 			type: "POST",
 			url:  action,
-
-			data: data
+			data: data,
+			header: {
+				contentType: "application/x-www-form-urlencoded"
+			}
 
 		}).success(function(response) {
 
@@ -330,8 +371,9 @@
 
         }); 
 
-
 });
+
+ */		 
 
 $('input[type=tel]').on('change invalid', function() {
 	var textfield = $(this).get(0);
@@ -343,7 +385,6 @@ $('input[type=tel]').on('change invalid', function() {
 		textfield.setCustomValidity('Por favor, introduce un número de 9 cifras');
 	}
 });
-
 
 
 

@@ -6,6 +6,88 @@
 	height: 100%;
 	padding:0;
 
+	.molecula{
+		top: -150px;
+		position: absolute;
+		z-index: 100;
+		width: 270px;
+		text-align: center;
+		font-size: 20px;
+		color: #fff;
+		font-weight: 700;
+		padding: 28px 12px 27px;
 
+		transition: 0.5s all ease-out;
+
+		
+
+		&>span{
+			position: relative;
+			z-index: 20;
+			display: block;
+		}
+		strong{
+			display: block;
+			font-size: 30px;
+
+		}
+
+		@media(max-width: 768px){
+			width: 150px;
+			font-size: 15px;
+			padding: 10px;
+
+			strong{
+				font-size: 17px;
+			}
+		}
+	}
+
+
+
+	.chevron {
+		text-align: center;
+		margin-bottom: 6px;
+	}
+
+	.chevron:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 51%;
+		background: $auxiliaryBlue;
+		-webkit-transform: skew(0deg, -6deg);
+		-moz-transform: skew(0deg, -6deg);
+		-ms-transform: skew(0deg, -6deg);
+		-o-transform: skew(0deg, -6deg);
+		transform: skew(0deg, -6deg);
+	}
+
+	.chevron:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 51%;
+		background: $auxiliaryBlue;
+		-webkit-transform: skew(0deg, 6deg);
+		-moz-transform: skew(0deg, 6deg);
+		-ms-transform: skew(0deg, 6deg);
+		-o-transform: skew(0deg, 6deg);
+		transform: skew(0deg, 6deg);
+	}
+
+
+}
+
+body[data-section='inicio']{
+	#section-inicio{
+		.molecula{
+			top:-6px;
+		}
+	}
 
 }

@@ -20,6 +20,7 @@
 
   <link href="assets/css/style.min.css" rel="stylesheet">
 
+
   <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
 </head>
@@ -27,7 +28,6 @@
 
   <!-- Loading and alerts -->
   <div id="alert-wrap" class="container">
-    
 
 
   </div>
@@ -356,16 +356,11 @@
 <section id="section-reservas">
   <div class="container">   
     <h2>RESERVAS</h2> 
-    <form
-     id="reservation-form"  
-     class="js-form-google"
-     method="POST"  
-     enctype="multipart/form-data"
-     data-form-type="reservations"
-    >
+    <form onsubmit="return false" method="POST" enctype="multipart/form-data" action='php/ajax-action2.php'>
+
       <div class="row">
         <div class="col-sm-6">
-         <select class="form-control" id="ajax-personas" name="entry.803314557"   autocomplete="off" required>
+         <select class="form-control" id="ajax-personas" name="numeropersonas"   autocomplete="off" required>
           <option value="">nº personas *</option>
           <option value="1">1 persona</option>
           <option value="2">2 personas</option>
@@ -380,7 +375,7 @@
 
       <div class="col-sm-6">
 
-        <select class="form-control" id="ajax-comidas" name="entry.1395433405"   autocomplete="off" required>
+        <select class="form-control" id="ajax-comidas" name="numerocomidas"   autocomplete="off" required>
           <option value="">regimen comidas *</option>
           <option value="desayuno">solo desayuno</option>
           <option value="media pension">media pensión</option>
@@ -393,10 +388,10 @@
 
     <div class="row">
       <div class="col-sm-6">
-        <input class="form-control" type="text" id="ajax-fechainicio" name="entry.2057233198" placeholder="Fecha de entrada *" size="35" autocomplete="off" required>
+        <input class="form-control" type="text" id="ajax-fechainicio" name="fechainicio" placeholder="Fecha de entrada *" size="35" autocomplete="off" required>
       </div>
       <div class="col-sm-6">
-        <input  class="form-control" type="text" id="ajax-fechafin" name="entry.472087654" placeholder="Fecha de salida *" size="35" autocomplete="off" required disabled>
+        <input  class="form-control" type="text" id="ajax-fechafin" name="fechafin" placeholder="Fecha de salida *" size="35" autocomplete="off" required disabled>
       </div>
     </div>
 
@@ -404,21 +399,21 @@
 
     <div class="row">
       <div class="col-sm-6">
-        <input class="form-control" type="text" id="ajax-primernombre" name="entry.1343002105" placeholder="Nombre *" size="35" autocomplete="off" required>
+        <input class="form-control" type="text" id="ajax-primernombre" name="primernombre" placeholder="Nombre *" size="35" autocomplete="off" required>
 
       </div>
       <div class="col-sm-6">
-        <input  class="form-control" type="text" id="ajax-apellidos" name="entry.1323162727" placeholder="Apellidos *" size="35" autocomplete="off" required></br>
+        <input  class="form-control" type="text" id="ajax-apellidos" name="apellidos" placeholder="Apellidos *" size="35" autocomplete="off" required></br>
 
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-6">
-       <input class="form-control" type="email" id="ajax-correo" name="entry.1328868945" placeholder="email *" size="35" autocomplete="off" required/>
+       <input class="form-control" type="email" id="ajax-correo" name="correo" placeholder="email *" size="35" autocomplete="off" required/>
      </div>
      <div class="col-sm-6">
-      <input pattern="\d{9}" class="form-control" type="tel" id="ajax-telefono" name="entry.2063890578" placeholder="Teléfono" size="35" autocomplete="off">
+      <input pattern="\d{9}" class="form-control" type="tel" id="ajax-telefono" name="telefono" placeholder="Teléfono" size="35" autocomplete="off">
     </div>
   </div>
 
@@ -432,7 +427,6 @@
 
   <p><small>* Campos obligatorios</small></p>
 </form>
-
 </div>  
 </section>
 
@@ -465,25 +459,18 @@
           Introduce tus datos
         </h3>
 
-        <form 
-          id="contact-form"   
-          class="js-form-google"
-          method="POST"  
-          enctype="multipart/form-data"
-          data-form-type="contact"
-          onsubmit="return false"
-        >
+        <form onsubmit="return false" method="POST" enctype="multipart/form-data" action='php/ajax-action.php' >
 
-          <input class="form-control" type="text" id="ajax-name" name="entry.1083698737" placeholder="Nombre *" size="25" autocomplete="off" required="">
+          <input class="form-control" type="text" id="ajax-name" name="name" placeholder="Nombre *" size="25" autocomplete="off" required="">
 
 
-          <input class="form-control" type="text" id="ajax-surname" name="entry.959745297" placeholder="Apellidos *" size="25" autocomplete="off" required="">
+          <input class="form-control" type="text" id="ajax-surname" name="surname" placeholder="Apellidos *" size="25" autocomplete="off" required="">
 
-          <input class="form-control" type="email" id="ajax-email" name="entry.878416553" placeholder="email *" size="25" autocomplete="off" required="">
+          <input class="form-control" type="email" id="ajax-email" name="email" placeholder="email *" size="25" autocomplete="off" required="">
 
-          <input pattern="\d{9}" class="form-control" type="tel" id="ajax-phone" name="entry.927212082" placeholder="Teléfono *" size="25" autocomplete="off" required="">
+          <input pattern="\d{9}" class="form-control" type="tel" id="ajax-phone" name="phone" placeholder="Teléfono *" size="25" autocomplete="off" required="">
 
-          <textarea class="form-control" id="ajax-text" name="entry.39717378" type="text" rows="5" cols="25" placeholder="lo que quieras"></textarea>
+          <textarea class="form-control" id="ajax-text" name="text" type="text" rows="5" cols="25" placeholder="lo que quieras"></textarea>
 
           <p><small>* Campos obligatorios</small></p>
 
@@ -492,7 +479,6 @@
 
           </p>
         </form>
-
 
 
       </div>
@@ -521,8 +507,6 @@
   </ul>
 </footer>
 
-
-
 <script src="assets/components/jquery/jquery.min.js"></script>
 
 <script src="assets/components/jqueryui/jquery-ui.min.js"></script>
@@ -532,7 +516,7 @@
 
 <script src="assets/components/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/components/blueimp/js/blueimp-gallery.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/scripts.min.js"></script>
 
 
 </body>

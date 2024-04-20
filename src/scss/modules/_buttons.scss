@@ -1,0 +1,70 @@
+.btn-pilates{
+	background: $mainPurple;
+	color: white;
+	font-size: 19px;
+	cursor: pointer;
+	position: relative;
+	padding-left: 30px;
+
+	transition: 0.3s all ease-in-out;
+
+	&:before{
+		content:'';
+		background: url(../img/pilates.svg) no-repeat 0 0;
+		@include position(absolute, 0px auto auto 3px);
+		background-size: 100%;
+		width: 42px;
+		height: 100%;
+
+	}
+
+	&:hover{
+		color: white;
+		background-color: darken($mainPurple, 10%);
+	}
+}
+
+.btn-tomates{
+	background: $mainRed;
+	color: white;
+	font-size: 19px;
+	cursor: pointer;
+	padding-left: 37px;
+	position: relative;
+
+	transition: 0.3s all ease-in-out;
+
+
+
+	&:before{
+		content:'';
+		background: url(../img/tomato.svg) no-repeat 0 3px;
+		@include position(absolute, 0px auto auto 3px);
+		background-size: 100%;
+		width: 30px;
+		height: 100%;
+
+	}
+
+
+	&:hover{
+		color: white;
+		background-color: darken($mainRed, 10%);
+
+	}
+
+}
+
+.btn-backwards{
+	color: white;
+	font-size: 19px;
+	background-color: orange;
+	transition: 0.3s all ease-in-out;
+	
+
+	&:hover{
+		color:white;
+		background-color: darken(orange, 10%);
+
+	}
+}

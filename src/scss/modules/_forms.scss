@@ -1,0 +1,53 @@
+form{
+	position: relative;
+
+	.ajax-info{
+		display: none;
+
+		@include position(fixed, 0px 0px 0px 0px);
+		
+		// background-color: rgba(0,0,0,0.6);
+
+		width: 100%;
+		height: 100%;
+		text-align: center;	
+		padding-top: 20px;
+		color:white;
+
+		.glyphicon{
+			font-size: 48px;
+		}
+
+		.glyphicon-ok{
+			color: #8dd28d;
+			
+		}
+
+		.glyphicon-remove{
+			color: #ff9d9d;
+			
+		}
+		
+	}
+
+	&.loading{
+		input, textarea{
+			opacity: 0.4
+		}
+
+		.ajax-info{
+			display: block;
+		}
+	
+		&.ok{
+			.ajax-info .ok{
+				display: block;
+			}
+		}
+
+	}
+
+
+
+
+}

@@ -16,6 +16,12 @@
 		padding: 5px 0;
 	}	
 
+	.navbar-nav{
+		li{
+			font-size: $navbar-font-size;
+		}
+	}
+
 	h1{
 		margin: 0;
 		padding: 0;
@@ -23,9 +29,9 @@
 		line-height: 25px;
 		color: $mainBlue;
 		font-weight: bold;
-		background-image: url(../img/logo.png);
+		background-image: url(../img/logo.svg);
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: 67px;
 		background-position: 0 0;
 		padding: 10px 0 10px 81px;
 		position: relative;
@@ -50,7 +56,7 @@
 
 @each $section in 'inicio' 'casa-azul' 'el-entorno' 'actividades' 'pilates' 'tomates' 'fotografias' 'precios' 'reservas' 'contacto' 'como-llegar' {
 	[data-section='#{$section}'] {
-		.navbar-nav .nav-#{$section} > a,  .navbar-nav .nav-#{$section} > a:hover
+		.navbar-nav .nav-#{$section} > a,  .navbar-nav .nav-#{$section} > a:hover, .navbar-nav .nav-#{$section} > a:focus, .navbar-nav .nav-#{$section} > a:active
 		{
 			color: $mainRed;
 
