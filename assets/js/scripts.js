@@ -277,6 +277,8 @@
 		}, lifeSpan);
 
 	}
+
+	/** Integration with google forms
 	$('.js-form-google').on('submit', function(e){
 		console.log("asdsadadsda");
 		e.preventDefault();
@@ -315,6 +317,39 @@
 		})
 	
 	});
+	*/
+
+	$('[data-netlify-ajax=true]').on('submit', function(event){
+		event.preventDefault();
+
+		const myForm = event.target;
+		const formData = new FormData(myForm);
+		const formType = form.attr("data-form-type");
+		const config = {
+			reservations: {
+				message: "Gracias por realizar su reserva. Nos pondremos en contacto.",
+			},
+			contact: {
+				message: "Gracias por su consulta. Nos pondremos en contacto.",
+			},
+		};
+
+		$('#loading-overlay').fadeIn();		
+		fetch("/", {
+		  method: "POST",
+		  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+		  body: new URLSearchParams(formData).toString(),
+		})
+		  .then(() => {
+			spawnAlert(config[formType].message, 'success', 'ok');
+		  })
+		  .catch((error) => {
+			spawnAlert('Error en el envío del formulario', 'danger', 'remove');	
+		  })
+		  .finally(() => {
+			$('#loading-overlay').fadeOut();
+		  })
+	})
 
 	
 	/** 
