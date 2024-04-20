@@ -357,8 +357,8 @@
   <div class="container">   
     <h2>RESERVAS</h2> 
     <form
+     data-netlify="true"
      id="reservation-form"  
-     class="js-form-google"
      method="POST"  
      enctype="multipart/form-data"
      data-form-type="reservations"
@@ -467,11 +467,10 @@
 
         <form 
           id="contact-form"   
-          class="js-form-google"
+          data-netlify="true"
           method="POST"  
           enctype="multipart/form-data"
           data-form-type="contact"
-          onsubmit="return false"
         >
 
           <input class="form-control" type="text" id="ajax-name" name="entry.1083698737" placeholder="Nombre *" size="25" autocomplete="off" required="">
