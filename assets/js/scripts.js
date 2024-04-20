@@ -322,7 +322,7 @@
 	$('[data-netlify-ajax=true]').on('submit', function(event){
 		event.preventDefault();
 
-		const myForm = event.target;
+		const myForm = $(this);
 		const formData = new FormData(myForm);
 		const formType = myForm.attr("data-form-type");
 		const config = {
