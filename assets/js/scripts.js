@@ -324,7 +324,7 @@
 
 		const myForm = event.target;
 		const formData = new FormData(myForm);
-		const formType = form.attr("data-form-type");
+		const formType = myForm.attr("data-form-type");
 		const config = {
 			reservations: {
 				message: "Gracias por realizar su reserva. Nos pondremos en contacto.",
