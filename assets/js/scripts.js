@@ -323,7 +323,7 @@
 		event.preventDefault();
 
 		const myForm = $(this);
-		const formData = new FormData(myForm);
+		const formData = new FormData(myForm[0]);
 		const formType = myForm.attr("data-form-type");
 		const config = {
 			reservations: {
