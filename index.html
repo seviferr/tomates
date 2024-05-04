@@ -20,6 +20,7 @@
 
   <link href="assets/css/style.min.css" rel="stylesheet">
 
+
   <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
 </head>
@@ -27,7 +28,6 @@
 
   <!-- Loading and alerts -->
   <div id="alert-wrap" class="container">
-    
 
 
   </div>
@@ -99,7 +99,7 @@
 
   <section id="section-inicio">
     <div class="container">
-      <div class="molecula chevron"><span>Empieza la nueva <strong>TEMPORADA 2019</strong></span></div>
+      <div class="molecula chevron"><span>Empieza la nueva <strong>TEMPORADA <span class="js-current-year">---</span></strong></span></div>
     </div>
 
     <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="5000">
@@ -357,15 +357,16 @@
   <div class="container">   
     <h2>RESERVAS</h2> 
     <form
-     data-netlify="true"
-     data-netlify-ajax="true"
-     id="reservation-form"  
-     method="POST"  
-     data-form-type="reservations"
-    >
+        data-netlify="true"
+        data-netlify-ajax="true"
+        id="reservation-form"  
+        method="POST"  
+        data-form-type="reservations"
+      >
+
       <div class="row">
         <div class="col-sm-6">
-         <select class="form-control" id="ajax-personas" name="Número de personas"   autocomplete="off" required>
+         <select class="form-control" id="ajax-personas" name="numeropersonas"   autocomplete="off" required>
           <option value="">nº personas *</option>
           <option value="1">1 persona</option>
           <option value="2">2 personas</option>
@@ -380,7 +381,7 @@
 
       <div class="col-sm-6">
 
-        <select class="form-control" id="ajax-comidas" name="Régimen comidas"   autocomplete="off" required>
+        <select class="form-control" id="ajax-comidas" name="numerocomidas"   autocomplete="off" required>
           <option value="">regimen comidas *</option>
           <option value="desayuno">solo desayuno</option>
           <option value="media pension">media pensión</option>
@@ -393,10 +394,10 @@
 
     <div class="row">
       <div class="col-sm-6">
-        <input class="form-control" type="text" id="ajax-fechainicio" name="Fecha entrada" placeholder="Fecha de entrada *" size="35" autocomplete="off" required>
+        <input class="form-control" type="text" id="ajax-fechainicio" name="fechainicio" placeholder="Fecha de entrada *" size="35" autocomplete="off" required>
       </div>
       <div class="col-sm-6">
-        <input  class="form-control" type="text" id="ajax-fechafin" name="Fecha salida" placeholder="Fecha de salida *" size="35" autocomplete="off" required disabled>
+        <input  class="form-control" type="text" id="ajax-fechafin" name="fechafin" placeholder="Fecha de salida *" size="35" autocomplete="off" required disabled>
       </div>
     </div>
 
@@ -404,21 +405,21 @@
 
     <div class="row">
       <div class="col-sm-6">
-        <input class="form-control" type="text" id="ajax-primernombre" name="Nombre" placeholder="Nombre *" size="35" autocomplete="off" required>
+        <input class="form-control" type="text" id="ajax-primernombre" name="primernombre" placeholder="Nombre *" size="35" autocomplete="off" required>
 
       </div>
       <div class="col-sm-6">
-        <input  class="form-control" type="text" id="ajax-apellidos" name="Apellidos" placeholder="Apellidos *" size="35" autocomplete="off" required></br>
+        <input  class="form-control" type="text" id="ajax-apellidos" name="apellidos" placeholder="Apellidos *" size="35" autocomplete="off" required></br>
 
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-6">
-       <input class="form-control" type="email" id="ajax-correo" name="Email" placeholder="email *" size="35" autocomplete="off" required/>
+       <input class="form-control" type="email" id="ajax-correo" name="correo" placeholder="email *" size="35" autocomplete="off" required/>
      </div>
      <div class="col-sm-6">
-      <input pattern="\d{9}" class="form-control" type="tel" id="ajax-telefono" name="Teléfono" placeholder="Teléfono" size="35" autocomplete="off">
+      <input pattern="\d{9}" class="form-control" type="tel" id="ajax-telefono" name="telefono" placeholder="Teléfono" size="35" autocomplete="off">
     </div>
   </div>
 
@@ -432,7 +433,6 @@
 
   <p><small>* Campos obligatorios</small></p>
 </form>
-
 </div>  
 </section>
 
@@ -465,7 +465,7 @@
           Introduce tus datos
         </h3>
 
-        <form 
+        <form        
           id="contact-form"   
           data-netlify="true"
           data-netlify-ajax="true"
@@ -473,16 +473,16 @@
           data-form-type="contact"
         >
 
-          <input class="form-control" type="text" id="ajax-name" name="Nombre" placeholder="Nombre *" size="25" autocomplete="off" required="">
+          <input class="form-control" type="text" id="ajax-name" name="name" placeholder="Nombre *" size="25" autocomplete="off" required="">
 
 
-          <input class="form-control" type="text" id="ajax-surname" name="Apellidos" placeholder="Apellidos *" size="25" autocomplete="off" required="">
+          <input class="form-control" type="text" id="ajax-surname" name="surname" placeholder="Apellidos *" size="25" autocomplete="off" required="">
 
-          <input class="form-control" type="email" id="ajax-email" name="Email" placeholder="email *" size="25" autocomplete="off" required="">
+          <input class="form-control" type="email" id="ajax-email" name="email" placeholder="email *" size="25" autocomplete="off" required="">
 
-          <input pattern="\d{9}" class="form-control" type="tel" id="Teléfono" name="entry.927212082" placeholder="Teléfono *" size="25" autocomplete="off" required="">
+          <input pattern="\d{9}" class="form-control" type="tel" id="ajax-phone" name="phone" placeholder="Teléfono *" size="25" autocomplete="off" required="">
 
-          <textarea class="form-control" id="ajax-text" name="Comentarios" type="text" rows="5" cols="25" placeholder="lo que quieras"></textarea>
+          <textarea class="form-control" id="ajax-text" name="text" type="text" rows="5" cols="25" placeholder="lo que quieras"></textarea>
 
           <p><small>* Campos obligatorios</small></p>
 
@@ -491,7 +491,6 @@
 
           </p>
         </form>
-
 
 
       </div>
@@ -519,8 +518,6 @@
     <li class="nav-como-llegar"><a href="#como-llegar">Como llegar</a></li>
   </ul>
 </footer>
-
-
 
 <script src="assets/components/jquery/jquery.min.js"></script>
 
